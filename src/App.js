@@ -30,38 +30,38 @@ class App extends Component {
     this.state = {
       score: {
         you: 0,
-        oponent: 0
+        opponent: 0
       },
       currentGame: {
         you: '',
-        oponent: ''
+        opponent: ''
       }
     }
 
     // Binding
     this._playTurn = this._playTurn.bind(this);
-    this._oponentPlay = this._oponentPlay.bind(this);
+    this._opponentPlay = this._opponentPlay.bind(this);
     this._calculateScore = this._calculateScore.bind(this);
   }
 
   _calculateScore() {
     let playYou = this.state.currentGame.you;
-    let playOponent = this.state.currentGame.oponent;
+    let playOpponent = this.state.currentGame.opponent;
     let youWon = 0;
-    let oponentWon = 0;
+    let opponentWon = 0;
 
-    youWon     = winning[playYou][playOponent];
-    oponentWon = winning[playOponent][playYou];
+    youWon     = winning[playYou][playOpponent];
+    opponentWon = winning[playOpponent][playYou];
 
     this.setState({
       score: {
         you: this.state.score.you + youWon,
-        oponent: this.state.score.oponent + oponentWon
+        opponent: this.state.score.opponent + opponentWon
       }
     });
   }
 
-  _oponentPlay(){
+  _opponentPlay(){
     /**
      * Play a random hand
      */
@@ -70,12 +70,12 @@ class App extends Component {
 
   _playTurn(play) {
     /**
-     * Show my play and let the oponent play
+     * Show my play and let the opponent play
      */
     this.setState({
       currentGame: {
         you: play,
-        oponent: this._oponentPlay()
+        opponent: this._opponentPlay()
       }
     }, this._calculateScore)
   }

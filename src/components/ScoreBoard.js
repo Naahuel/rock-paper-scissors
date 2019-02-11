@@ -30,7 +30,7 @@ class ScoreBoard extends Component {
     return (
       <Wrapper>
         <Column><Title>You:</Title> {this.props.score.you}</Column>
-        <Column><Title>Oponent:</Title> {this.props.score.oponent}</Column>
+        <Column><Title>Opponent:</Title> {this.props.score.opponent}</Column>
       </Wrapper>
     );
   }

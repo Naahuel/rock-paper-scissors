@@ -35,8 +35,8 @@ class CurrentPlay extends Component {
           <ThrowIcon throw={this.props.play.you} />
         </Column>
         <Column>
-          <Title>Oponent:</Title>
-          <ThrowIcon throw={this.props.play.oponent} />
+          <Title>Opponent:</Title>
+          <ThrowIcon throw={this.props.play.opponent} />
         </Column>
       </Wrapper>
     );
