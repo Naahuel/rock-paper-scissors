@@ -1,10 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # Rock Paper Scissors!
-Play online.
+[Play online](react-rps.now.sh).
 
-## Available Scripts
+## Development
 
-In the project directory, you can run:
+Clone the project, then in the project directory, you can run:
+
+### `npm install`
+
+Installs the dependencies.
 
 ### `npm start`
 
