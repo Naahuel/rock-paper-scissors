@@ -47,11 +47,8 @@ class App extends Component {
   _calculateScore() {
     let playYou = this.state.currentGame.you;
     let playOpponent = this.state.currentGame.opponent;
-    let youWon = 0;
-    let opponentWon = 0;
-
-    youWon     = winning[playYou][playOpponent];
-    opponentWon = winning[playOpponent][playYou];
+    let youWon = winning[playYou][playOpponent];
+    let opponentWon = winning[playOpponent][playYou];
 
     this.setState({
       score: {

@@ -30,14 +30,14 @@ class CurrentPlay extends Component {
   render() {
     return (
       <Wrapper>
-        <Column>
+        {this.props.play.you && <Column>
           <Title>You:</Title>
           <ThrowIcon throw={this.props.play.you} />
-        </Column>
-        <Column>
+        </Column>}
+        {this.props.play.opponent && <Column>
           <Title>Opponent:</Title>
           <ThrowIcon throw={this.props.play.opponent} />
-        </Column>
+        </Column>}
       </Wrapper>
     );
   }
