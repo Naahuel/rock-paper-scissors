@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # Rock Paper Scissors!
-[Play online](react-rps.now.sh).
+[Play online](https://react-rps.now.sh).
 
 ## Development
 
