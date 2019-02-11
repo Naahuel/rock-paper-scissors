@@ -3,6 +3,8 @@ import PlaySelector from './components/PlaySelector';
 import ScoreBoard from './components/ScoreBoard';
 import CurrentPlay from './components/CurrentPlay';
 
+import './App.css';
+
 const plays = ['rock', 'paper', 'scissors'];
 const winning = {
   rock : {

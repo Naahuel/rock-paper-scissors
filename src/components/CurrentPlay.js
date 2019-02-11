@@ -20,11 +20,6 @@ const Column = styled.div`
   text-align: center;
 `
 
-const Title = styled.h1`
-  font-size: 1rem;
-  font-weight: bold;
-`
-
 const enterLeft = keyframes`
   from {
     transform: rotate(0deg) translateX(-100%);

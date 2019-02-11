@@ -9,6 +9,9 @@ const Wrapper = styled.div`
   left: 0;
   right: 0;
   display: flex;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #FFF;
+  text-shadow: 3px 4px 15px rgba(0, 0, 0, 0.25);
 `
 
 const Column = styled.div`
@@ -16,6 +19,7 @@ const Column = styled.div`
   flex-basis: 50%;
   width: 50%;
   text-align: center;
+  font-size: 5rem;
 `;
 
 const Title = styled.h1`

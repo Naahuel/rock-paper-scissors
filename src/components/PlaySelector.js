@@ -10,6 +10,8 @@ const Wrapper = styled.div`
   right: 0;
   font-size: 0;
   display:flex;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 `
 
 const Button = styled.button`
@@ -18,7 +20,6 @@ const Button = styled.button`
   background-color: transparent;
   border-left: ${props => props.center ? "1px solid black" : "0"};
   border-right: ${props => props.center ? "1px solid black" : "0"};
-  border-top: 1px solid black;
   flex: 1;
   flex-basis: 33%;
   width: 33%;
@@ -26,6 +27,12 @@ const Button = styled.button`
   margin: 0;
   padding: 1rem;
   border-radius: 0;
+  outline: 0;
+  transition: all 0.2s ease-out;
+
+  &:active {
+    transform: scale(1.1);
+  }
 `;
 
 
