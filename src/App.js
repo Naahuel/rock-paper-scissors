@@ -3,7 +3,24 @@ import PlaySelector from './components/PlaySelector';
 import ScoreBoard from './components/ScoreBoard';
 import CurrentPlay from './components/CurrentPlay';
 
-const plays = ['rock', 'paper', 'scissors']
+const plays = ['rock', 'paper', 'scissors'];
+const winning = {
+  rock : {
+    rock: 0,
+    paper: 0,
+    scissors: 1
+  },
+  paper : {
+    rock: 1,
+    paper: 0,
+    scissors: 0
+  },
+  scissors : {
+    rock: 0,
+    paper: 1,
+    scissors: 0
+  }
+}
 
 class App extends Component {
   constructor(props) {
@@ -30,18 +47,11 @@ class App extends Component {
   _calculateScore() {
     let playYou = this.state.currentGame.you;
     let playOponent = this.state.currentGame.oponent;
-
-    let indexYou = plays.indexOf(playYou);
-    let indexOponent = plays.indexOf(playOponent);
-
     let youWon = 0;
     let oponentWon = 0;
 
-    if( indexOponent > indexYou ) {
-      oponentWon = 1;
-    } else if ( indexYou > indexOponent ) {
-      youWon = 1;
-    }
+    youWon     = winning[playYou][playOponent];
+    oponentWon = winning[playOponent][playYou];
 
     this.setState({
       score: {
@@ -52,6 +62,9 @@ class App extends Component {
   }
 
   _oponentPlay(){
+    /**
+     * Play a random hand
+     */
     return plays[Math.floor(Math.random() * plays.length)];
   }
 
@@ -59,14 +72,10 @@ class App extends Component {
     /**
      * Show my play and let the oponent play
      */
-    let oponentPlay = this._oponentPlay();
-    console.log('You played: ', play);
-    console.log('Oponent played: ', oponentPlay);
-
     this.setState({
       currentGame: {
         you: play,
-        oponent: oponentPlay
+        oponent: this._oponentPlay()
       }
     }, this._calculateScore)
   }
