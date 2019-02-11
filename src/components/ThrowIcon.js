@@ -29,7 +29,7 @@ class ThrowIcon extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Wrapper className={this.props.className}>
         {this.state.icon && <Icon src={this.state.icon} alt={this.props.throw} />}
       </Wrapper>
     );
@@ -37,6 +37,7 @@ class ThrowIcon extends Component {
 }
 
 ThrowIcon.propTypes = {
+  className: PropTypes.string,
   throw: PropTypes.string
 }
 

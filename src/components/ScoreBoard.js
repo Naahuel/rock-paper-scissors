@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   left: 0;
   right: 0;
   display: flex;
-  border-bottom: 1px solid black;
 `
 
 const Column = styled.div`

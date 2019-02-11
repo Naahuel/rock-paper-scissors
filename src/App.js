@@ -69,12 +69,22 @@ class App extends Component {
     /**
      * Show my play and let the opponent play
      */
+    // First reset the current play
     this.setState({
       currentGame: {
-        you: play,
-        opponent: this._opponentPlay()
+        you: '',
+        opponent: ''
       }
-    }, this._calculateScore)
+    }, _ => {
+      // Then set the play
+      // This is to trigger animations again
+      this.setState({
+        currentGame: {
+          you: play,
+          opponent: this._opponentPlay()
+        }
+      }, this._calculateScore);
+    })
   }
 
   render() {
