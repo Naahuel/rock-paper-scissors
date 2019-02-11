@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import ThrowIcon from './ThrowIcon';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -34,7 +34,7 @@ class PlaySelector extends Component {
     return (
       <Wrapper>
         {this.props.plays.map(play => {
-          return <Button key={play} onClick={this.props.onPlay.bind(this, play)}>{play}</Button>
+          return <Button key={play} onClick={this.props.onPlay.bind(this, play)}><ThrowIcon throw={play} /></Button>
         })}
       </Wrapper>
     );
